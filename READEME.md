@@ -8,6 +8,7 @@ Nginx の X-Accel-Redirect を使って、保護されたコンテンツ(S3上)�
 ```
 
 `http://localhost:80/api/v1/image`にアクセスするとS3上のコンテンツが返却されるはず。
+**＊必要な環境変数は聞いて下さい。**
 
 # 参考サイト
 - [DjangoでNginxのX-Accel-Redirectを使って、保護されたコンテンツを配信する方法](https://note.com/shimakaze_soft/n/nbeeeeeef6d8f)
