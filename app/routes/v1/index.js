@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-var AWS = require('aws-sdk');
+const express = require('express');
+const router = express.Router();
+const AWS = require('aws-sdk');
 
 router.get('/image',function(req,res){
 
@@ -10,14 +10,14 @@ router.get('/image',function(req,res){
     "region": process.env.REGION
   });
 
-  var params = {
+  const params = {
     Bucket: process.env.BUCKET,
     Key: process.env.KEY,
     Expires: Number(process.env.EXPIRES)
   };
 
-  var s3 = new AWS.S3();
-  var url = s3.getSignedUrl('getObject', params);
+  const s3 = new AWS.S3();
+  const url = s3.getSignedUrl('getObject', params);
   console.log("The URL is", url);
 
   res.header('Content-Type', 'image/jpg');
