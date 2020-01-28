@@ -1,16 +1,20 @@
-# x-accel-redirect 検証用リポジトリ
-Nginx の X-Accel-Redirect を使って、保護されたコンテンツ(S3上)を配信する方法を検証するためのリポジトリ。
+# node.js 検証用リポジトリ
+## 検証項目一覧
+- Nginx の X-Accel-Redirect を使って、保護されたコンテンツ(S3上)を配信する方法
 
-# セットアップとS3上のコンテンツの取得
+## セットアップとS3上のコンテンツの取得
 各コンテナの起動(`docker-compose.yml`があるディレクトリにて)。
 ```zsh
 % docker-compose up
 ```
 
+## 検証操作
+### Nginx の X-Accel-Redirect を使って、保護されたコンテンツ(S3上)を配信する方法
 `http://localhost:80/api/v1/image`にアクセスするとS3上のコンテンツが返却されるはず。
-**＊必要な環境変数は聞いて下さい。**
+**＊実施前に環境変数の定義が必要です。**
 
-# 参考サイト
+## 参考サイト
+### Nginx の X-Accel-Redirect を使って、保護されたコンテンツ(S3上)を配信する方法
 - [DjangoでNginxのX-Accel-Redirectを使って、保護されたコンテンツを配信する方法](https://note.com/shimakaze_soft/n/nbeeeeeef6d8f)
 - [【AWS S3】S3 Presigned URLの仕組みを調べてみた](https://qiita.com/tmiki/items/87697d3d3d5330c6fc08)
 - [S3で有効期限付きのページを作る(node.js＋AWS＋S3)|おちゃカメラ。 ](https://photo-tea.com/p/s3-expires-page/)
