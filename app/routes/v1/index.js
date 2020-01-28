@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const AWS = require('aws-sdk');
+const cluster = require('cluster');
 
 router.get('/image',function(req,res){
+  console.log(`[${cluster.worker.id}] [PID ${cluster.worker.process.pid}] Request`);
 
   AWS.config.update({
     "accessKeyId": process.env.ACCESS_KEY_ID,
